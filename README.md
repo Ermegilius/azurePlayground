@@ -1,7 +1,7 @@
-# Countries Fullstack (testing Azure)
+# Countries Fullstack (with Azure)
 
 A full-stack application with NestJS backend and React frontend. The application provides information about countries around the world. Browse countries, view detailed information, check capital city weather, and save your favorites.
-It's my study project to learn how to deal with NestJS and Supabase.
+It's my study project to learn how to deal with NestJS and Supabase. **This version is deployed on Azure.**
 
 ## Features
 
@@ -15,8 +15,9 @@ Dark/Light Mode: Toggle between dark and light themes
 
 ## Project Structure
 
-```sh
+```
 project-root/
+├── .github/         # GitHub Actions workflows (deployment)
 ├── backend/         # NestJS application
 │   ├── src/         # Source code
 │   ├── test/        # Test files
@@ -56,8 +57,9 @@ project-root/
 -   Node.js (v18 or higher recommended)
 -   npm (comes with Node.js)
 -   Supabase account (free tier works fine)
+-   OpenWeather API key (free tier available)
 
-## Installation
+## Installation (to run locally)
 
 1. Clone the repository:
 
@@ -98,7 +100,7 @@ npm run dev
 The applications will be available at:
 
 -   Frontend: http://localhost:5180
--   Backend: http://localhost:3000
+-   Backend: http://localhost:8080
 
 ### Available Commands
 
@@ -167,7 +169,7 @@ To test protected functionality:
 -   View existing entries or create new ones
 -   Log out to verify access restrictions
 
-## Deployment
+## Deployment (locally)
 
 Building for Production
 
@@ -177,9 +179,20 @@ npm run build
 
 This will create production builds for both frontend and backend in their respective /dist directories.
 
+## Deployment (Azure)
+
+It uses GitHub Actions to deploy the application to Azure. The deployment workflow is defined in:
+
+-   front: .github/workflows/azure-static-web-apps-gray-plant-031837210.yml
+-   back: .github/workflows/azure-webapps-node.yml
+
+Links to the deployed version:
+front: https://gray-plant-031837210.azurestaticapps.net/
+back: https://countries-backend.azurewebsites.net/
+
 ## Development Notes
 
--   The backend includes CORS configuration for the frontend port (5180);
+-   The backend includes CORS configuration for the frontend;
 -   TypeScript is configured for both frontend and backend;
 -   ESLint and Prettier are set up for code formatting;
 -   Both applications include hot-reload functionality for development;
