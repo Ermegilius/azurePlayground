@@ -1,4 +1,4 @@
-# Countries Fullstack
+# Countries Fullstack (testing Azure)
 
 A full-stack application with NestJS backend and React frontend. The application provides information about countries around the world. Browse countries, view detailed information, check capital city weather, and save your favorites.
 It's my study project to learn how to deal with NestJS and Supabase.
