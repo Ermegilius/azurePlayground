@@ -179,9 +179,9 @@ This will create production builds for both frontend and backend in their respec
 
 ## Development Notes
 
--   The backend includes CORS configuration for the frontend port (5180)
--   TypeScript is configured for both frontend and backend
--   ESLint and Prettier are set up for code formatting
--   Both applications include hot-reload functionality for development
--   Authentication is handled through Supabase Auth UI
--   Row-Level Security (RLS) policies are used in Supabase for data protection
+-   The backend includes CORS configuration for the frontend port (5180);
+-   TypeScript is configured for both frontend and backend;
+-   ESLint and Prettier are set up for code formatting;
+-   Both applications include hot-reload functionality for development;
+-   Authentication is handled through Supabase Auth UI;
+-   Row-Level Security (RLS) policies are used in Supabase for data protection;
