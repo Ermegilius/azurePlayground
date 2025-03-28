@@ -1,4 +1,4 @@
-import { createTheme, PaletteMode, Theme, ThemeOptions } from "@mui/material/styles";
+import { createTheme, PaletteMode, ThemeOptions } from "@mui/material/styles";
 import { deepmerge } from "@mui/utils";
 
 // Declare module augmentation for custom palette properties

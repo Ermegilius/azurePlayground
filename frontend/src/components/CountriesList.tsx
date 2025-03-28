@@ -32,10 +32,7 @@ const CountriesList = () => {
 
 	// Filter the countries by input value without mutating the state
 	const filteredCountries = useMemo(
-		() =>
-			sortedCountries.filter((option) =>
-				option.name.common.toLowerCase().includes(inputValue.toLowerCase())
-			),
+		() => sortedCountries.filter((option) => option.name.common.toLowerCase().includes(inputValue.toLowerCase())),
 		[sortedCountries, inputValue]
 	);
 
@@ -91,9 +88,7 @@ const CountriesList = () => {
 
 	// Custom filter function for Autocomplete
 	const filterOptions = (options: Country[], { inputValue }: { inputValue: string }) => {
-		return options.filter((option) =>
-			option.name.common.toLowerCase().includes(inputValue.toLowerCase())
-		);
+		return options.filter((option) => option.name.common.toLowerCase().includes(inputValue.toLowerCase()));
 	};
 
 	if (loading) {
@@ -169,10 +164,9 @@ const CountriesList = () => {
 									fontWeight: "bold",
 								},
 								// For the outline when focused
-								"& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-									{
-										borderColor: "primary.dark",
-									},
+								"& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
+									borderColor: "primary.dark",
+								},
 
 								// Background color when focused
 								"& .MuiOutlinedInput-root.Mui-focused": {
@@ -183,7 +177,7 @@ const CountriesList = () => {
 					)}
 					filterOptions={filterOptions}
 					inputValue={inputValue}
-					onInputChange={(event, newInputValue) => {
+					onInputChange={(_event, newInputValue) => {
 						setInputValue(newInputValue);
 					}}
 				/>

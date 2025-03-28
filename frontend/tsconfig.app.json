@@ -1,4 +1,5 @@
 {
+	"extends": "./tsconfig.json",
 	"compilerOptions": {
 		"incremental": true,
 		"tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
@@ -22,5 +23,6 @@
 		"noUnusedParameters": true,
 		"noFallthroughCasesInSwitch": true
 	},
-	"include": ["src", "cypress/e2e"]
+	"include": ["src", "cypress/e2e"],
+	"exclude": ["cypress/**/*.ts", "**/*.cy.ts", "node_modules"]
 }
