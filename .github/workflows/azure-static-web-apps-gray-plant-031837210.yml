@@ -33,11 +33,9 @@ jobs:
                   output_location: "dist" # Built app content directory - optional
                   ###### End of Repository/Build Configurations ######
               env:
-                  VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
-                  VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
-                  VITE_WEATHER_API_KEY: ${{ secrets.VITE_WEATHER_API_KEY }}
-                  SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
-                  SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+                  VITE_SUPABASE_URL: "https://stfhtauijuytnirafgxq.supabase.co"
+                  VITE_SUPABASE_ANON_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InN0Zmh0YXVpanV5dG5pcmFmZ3hxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3Mzg5MjIyMTMsImV4cCI6MjA1NDQ5ODIxM30.3JoGdn6a1Gva4pYHrVWNiE4QqCS3zYcCl9GCJQC3zZg"
+                  VITE_WEATHER_API_KEY: "57c86cc2e365cfd1d49b9c35ce332091"
 
     close_pull_request_job:
         if: github.event_name == 'pull_request' && github.event.action == 'closed'
